@@ -4,6 +4,9 @@ import React,{useState,useEffect} from 'react';
 // import './App.css';
 import './Home.css';
 import bm from '../bm.png';
+import hm from '../hm.png';
+import star from '../star.png';
+import Bookmark from './Bookmark';
 
 const Quotes = () => {
     const [quote, setQuote] = useState('');
@@ -31,18 +34,28 @@ const Quotes = () => {
       getQuote();
     }
 
+    // const handleAddBookmark=(quote,author)=>{
+    //     localStorage.setItem(quote)
+    //     localStorage.setItem(author)
 
     
     
    return(
         <div id='quote-box'>
+        <a href='/' id='hm'>
+          <span><img src={hm} alt="" /></span>
+                    </a>
+                    <a href='/Bookmark' id='bookm'>
+                        <span><img src={bm} alt="" /></span>
+                    </a>
+
             <div id='text'><p>{quote}</p></div>
             <div id='author'><p>{author}</p></div>
             <div id='buttons'>
                 <div className='bookmark'>
-                    <a href='/Bookmark' id='bookm'>
-                        <span><img src={bm} alt="" /></span>
-                    </a>
+                    {/* <a href='#' id='bookm'> */}
+                        <span><img src={star} alt="" /></span>
+                    {/* </a> */}
                     <button onClick={handleClick} id="new-quote">New Quote</button>
                               
 

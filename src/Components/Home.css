@@ -38,10 +38,10 @@ body{
 }
 .bookmark > a{
     margin-left: .5rem;
-    /* background: purple; */
     padding: .3rem .5rem;
     cursor: pointer;
     border-radius: 3px;
+   
 }
 .bookmark > a:hover{
     opacity: .9;
@@ -65,3 +65,7 @@ width: 1.5rem;
 #new-quotes{
     opacity: 0.9;
 }
+.hm > a img{
+    width: 1.5rem;
+    }
+  
